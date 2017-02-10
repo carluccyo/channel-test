@@ -15,9 +15,26 @@ router.get('/about', function(req, res) {
   res.send('About channel')
 })
 
-router.post('/', function(req, res) {
+
+router.post('/init', function(req, res) {
+    //init users
+
+
+    var _users = req.body.users;
+
     console.log(req.body);
     res.send(req.body);
+
+});
+
+
+
+router.post('/', function(req, res) {
+
+    // get message from brodcast
+    console.log(req.body);
+    res.send(req.body);
+
 });
 
 module.exports = router
